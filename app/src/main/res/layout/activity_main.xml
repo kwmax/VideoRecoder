@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/begin_recode"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:textAllCaps="false"
+                android:text="录制"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:drawableTop="@drawable/begin_record"/>
+
+            <TextView
+                android:id="@+id/stop_recode"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:textAllCaps="false"
+                android:text="停止"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:drawableTop="@drawable/stop_record"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/begin_play"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:drawableTop="@drawable/begin_play"
+                android:text="播放"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/stop_play"
+                android:layout_width="50dp"
+                android:layout_height="60dp"
+                android:drawableTop="@drawable/stop_play"
+                android:text="停止"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/surface_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/menu"
+        android:layout_margin="20dp">
+
+        <SurfaceView
+            android:id="@+id/play_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <SurfaceView
+            android:id="@+id/record_surface"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+
+</RelativeLayout>
